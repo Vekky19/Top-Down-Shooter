@@ -19,10 +19,15 @@ public class PlayerMovement : MonoBehaviour
     void MovePlayer()
     {
         float xMovement = Input.GetAxis("Horizontal") * Time.deltaTime;
+        float yMovement = Input.GetAxis("Vertical") * Time.deltaTime;
 
         if (xMovement != 0)
         {
-            player.position = new Vector2(player.position.x + xMovement * playerSpeed, ylock);
+            player.position = new Vector2(player.position.x + xMovement * playerSpeed, player.position.y);
+        }
+        if (yMovement != 0)
+        {
+            player.position = new Vector2(player.position.x, player.position.y + yMovement * playerSpeed);
         }
     }
 

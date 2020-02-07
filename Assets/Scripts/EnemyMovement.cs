@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public float zombieRange = 8;
+    public float zombieRange = 5;
     public float zombieSpeed = 2;
 
     public GameObject zombie;
@@ -41,7 +41,7 @@ public class EnemyMovement : MonoBehaviour
 
         if (distanceToPlayer <= zombieRange && distanceToPlayer >= 0.25)
         {
-            Movement(zombieSpeed, zombieSpeed);
+            Movement(zombieSpeed, zombieSpeed * 2);
         }
         else if (distanceToPlayer >= 0.25)
         {

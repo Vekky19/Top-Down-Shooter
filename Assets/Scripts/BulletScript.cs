@@ -9,7 +9,7 @@ public class BulletScript : MonoBehaviour
 
     private void Start()
     {
-        Destroy(this.gameObject,3);    
+        Destroy(this.gameObject,1.5f);    
     }
 
     void BulletMove()

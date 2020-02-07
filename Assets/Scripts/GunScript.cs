@@ -11,10 +11,13 @@ public class GunScript : MonoBehaviour
     public Transform firePoint;
     public Rigidbody2D bulletPrefab;
 
+    public ParticleSystem effect;
+
     void Shoot()
     {
         Rigidbody2D Bullet = Instantiate(bulletPrefab);
         Bullet.gameObject.transform.position = firePoint.position;
+        effect.Play(true);
     }
 
     void Reload()
